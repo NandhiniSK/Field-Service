@@ -1,5 +1,3 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -22,8 +20,14 @@
 body {
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: #d8d7d7;
+  color: rgb(44, 43, 43);
 }
 
 .row {
   margin: 0px !important;
+}
+
+label {
+  font-size: calc(7px + 1.5vmin);
 }

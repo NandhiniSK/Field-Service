@@ -1,7 +1,6 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '~@angular/material/theming';
-@import '~bootstrap/dist/css/bootstrap.min.css';
-@import 'material-icons/iconfont/filled.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 @include mat-core();
 $primary: mat-palette($mat-blue, 200);
 $accent: mat-palette($mat-orange, 200);
@@ -11,8 +10,12 @@ $dark-theme: mat-dark-theme($primary, $accent);
 @include angular-material-theme($light-theme);
 @include angular-material-theme($dark-theme);
 
-.light {
+body {
+  background-color: rgb(139, 37, 37);
+}
+
+.dark-theme {
   body {
-    background-color: rgb(102, 64, 64);
+    background-color: rgb(20, 20, 20);
   }
 }
