@@ -37,6 +37,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { AppRoutingModule } from '../app-routing.module';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -67,6 +68,7 @@ import { CompanyProfileComponent } from './company-profile/company-profile.compo
     MatTabsModule,
     MatTooltipModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
@@ -81,7 +83,7 @@ import { CompanyProfileComponent } from './company-profile/company-profile.compo
     CompanyProfileComponent,
   ],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
 })
 export class AppModule {}

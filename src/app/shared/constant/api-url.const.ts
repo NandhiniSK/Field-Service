@@ -1,24 +1,24 @@
-this.baseURL = './';
+let baseURL = '/';
 export let APIURL = {
   getJob: function () {
-    return this.baseURL + 'assets/job.json';
+    return baseURL + 'assets/data/job.json';
   },
   getCustomers: function () {
-    return this.baseURL + 'assets/customer.json';
+    return baseURL + 'assets/customer.json';
   },
   getEmployee: function () {
-    return this.baseURL + 'assets/employee.json';
+    return baseURL + 'assets/employee.json';
   },
   getSchedule: function () {
-    return this.baseURL + 'assets/schedule.json';
+    return baseURL + 'assets/data/schedule.json';
   },
   getServices: function () {
-    return this.baseURL + 'assets/service.json';
+    return baseURL + 'assets/service.json';
   },
-  getHistory: function () {
-    return this.baseURL + 'assets/history.json';
+  getory: function () {
+    return baseURL + 'assets/history.json';
   },
   getInvoices: function () {
-    return this.baseURL + 'assets/invoice.json';
+    return baseURL + 'assets/invoice.json';
   },
 };

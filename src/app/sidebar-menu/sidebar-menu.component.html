@@ -1,5 +1,9 @@
 <div class="side-menu-list">
   <span *ngFor="let menu of menuList">
-    <mat-icon  [routerLink]="menu.routeLink">{{menu.icon}}</mat-icon>
-  <span>
+    <mat-icon
+      [routerLink]="menu.routeLink"
+      [ngClass]="activeMenuBar == menu.routeLink ? '.active-menu' : ''"
+      >{{ menu.icon }}</mat-icon
+    >
+  </span>
 </div>

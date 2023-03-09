@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar-menu',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar-menu.component.css'],
 })
 export class SidebarMenuComponent implements OnInit {
-  constructor() {
+  activeMenuBar: string = '';
+
+  constructor(public router: Router) {
+    let urlPath = this.router?.url?.split('/');
+    if (urlPath && urlPath.length > 3) this.activeMenuBar = urlPath[4];
     this.getMenuList();
   }
 

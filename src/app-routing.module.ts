@@ -10,10 +10,6 @@ import { ServiceListComponent } from './app/service-list/service-list.component'
 
 const routes = [
   {
-    path: '',
-    component: HomeComponent,
-  },
-  {
     path: 'home',
     component: HomeComponent,
   },
