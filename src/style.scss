@@ -1,6 +1,10 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-.row {
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
-  margin:0px !important;
+.row {
+  margin: 0px !important;
 }

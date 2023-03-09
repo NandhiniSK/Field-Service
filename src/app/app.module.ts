@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -34,9 +34,14 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
+import { AppRoutingModule } from '../app-routing.module';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { CompanyProfileComponent } from './company-profile/company-profile.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule,
+  imports: [
+    BrowserModule,
+    FormsModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -61,7 +66,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatTableModule,
     MatTabsModule,
     MatTooltipModule,
-     RouterModule.forRoot([])],
+    AppRoutingModule,
+  ],
   declarations: [
     AppComponent,
     CustomerComponent,
@@ -69,10 +75,13 @@ import { MatSelectModule } from '@angular/material/select';
     HistoryComponent,
     HomeComponent,
     InvoiceComponent,
+    ScheduleComponent,
     SidebarMenuComponent,
     ServiceListComponent,
+    CompanyProfileComponent,
   ],
   bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
 })
 export class AppModule {}
