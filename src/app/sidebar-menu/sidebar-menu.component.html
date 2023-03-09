@@ -1,5 +1,5 @@
 <div class="side-menu-list">
-  <mat-icon *ngFor="let menu of menuList" [routerLink]="menu.routeLink">{{
-    menu.icon
-  }}</mat-icon>
+  <span *ngFor="let menu of menuList">
+    <mat-icon  [routerLink]="menu.routeLink">{{menu.icon}}</mat-icon>
+  <span>
 </div>
