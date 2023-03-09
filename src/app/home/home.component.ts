@@ -1,3 +1,4 @@
+import { KeyValue } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Job } from '../shared/model/job.model';
 import { HomeService } from '../shared/service/home-service';
@@ -8,6 +9,10 @@ import { HomeService } from '../shared/service/home-service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  jobList: Job[] = [];
+  countByStatus: KeyValue<string, number> = {} as KeyValue<string,number>;
+  countByPerson: KeyValue<string, number> = {} as KeyValue<string,number>;
+
   constructor(private homeService: HomeService) {
     this.getJob();
   }
@@ -17,8 +22,10 @@ export class HomeComponent implements OnInit {
   getJob() {
     this.homeService.getJob().subscribe((response) => {
       if (response) {
-        let jobList = response as Job[];
-        this.homeService.getJobCountByStatusAndEmp(jobList);
+        this.jobList = response as Job[]
+        let jobStatus = this.homeService.getJobCountByStatusAndEmp(this.jobList);
+        this.countByStatus = jobStatus.count_by_status;
+        this.countByPerson = jobStatus.count_by_person;
       }
     });
   }

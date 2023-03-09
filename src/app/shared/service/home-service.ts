@@ -13,7 +13,7 @@ export class HomeService {
     return this.http.get(url, { responseType: 'json' });
   }
 
-  getJobCountByStatusAndEmp(jobList: Job[]) {
+  getJobCountByStatusAndEmp(jobList: Job[]) : JobStatus {
     let jobStatus = new JobStatus();
     jobList.forEach((x: Job) => {
       jobStatus.count_by_status[x.status] = jobStatus.count_by_status[x.status]
@@ -25,6 +25,6 @@ export class HomeService {
           : 1;
       });
     });
-    console.log(jobStatus);
+    return jobStatus;
   }
 }
