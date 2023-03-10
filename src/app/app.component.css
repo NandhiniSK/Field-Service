@@ -10,12 +10,12 @@
 }
 
 .menu-content {
-  padding: 0.5rem;
-  height: calc(50px + 0.5rem);
+  padding-bottom: 1rem;
+  height: calc(50px + 1rem);
 }
 
 .main-content {
-  height: calc(100vh - (50px + 0.5rem));
+  height: calc(100vh - (50px + 1rem));
   overflow-y: auto;
   overflow-x: hidden;
   padding: 1rem;

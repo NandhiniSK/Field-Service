@@ -7,7 +7,7 @@
   },
   {
     "job_id": 2,
-    "status": "ON_MY_WAY",
+    "status": "ON MY WAY",
     "assigned_to": ["vijay"],
     "location": "chennai"
   },
